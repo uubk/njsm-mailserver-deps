@@ -1,0 +1,12 @@
+[submodule "mcrouter"]
+	path = mcrouter
+	url = git@github.com:uubk/mcrouter.git
+[submodule "wangle"]
+	path = wangle
+	url = git@github.com:uubk/wangle.git
+[submodule "folly"]
+	path = folly
+	url = git@github.com:uubk/folly.git
+[submodule "sagrey"]
+	path = sagrey
+	url = git@github.com:uubk/sagrey.git

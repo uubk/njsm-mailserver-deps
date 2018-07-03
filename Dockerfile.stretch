@@ -1,0 +1,32 @@
+FROM uubk/debuild:stretch
+
+ARG LUID=1000
+RUN apt update && \
+  apt upgrade -y && \
+  apt install -y libboost-all-dev \
+    libevent-dev \
+    libdouble-conversion-dev \
+    libgoogle-glog-dev \
+    libgflags-dev \
+    liblz4-dev \
+    liblzma-dev \
+    libsnappy-dev \
+    zlib1g-dev \
+    libjemalloc-dev \
+    libssl-dev \
+    libiberty-dev \
+    libdwarf-dev \
+    cmake \
+    ragel \
+    quilt \
+    libunwind8-dev
+
+COPY . /tmp/wd
+WORKDIR /tmp/wd
+RUN ./build.sh stretch && \
+  chown -R ${LUID} /tmp/wd/out && \
+  tar -C /tmp/wd/out -cvf /pkg.tar . && \
+  rm -Rf /tmp/wd
+
+ENTRYPOINT ["/bin/tar"]
+CMD ["-xvf", "/pkg.tar", "-C", "/data"]
