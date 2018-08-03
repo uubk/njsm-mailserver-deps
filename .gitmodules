@@ -10,3 +10,6 @@
 [submodule "sagrey"]
 	path = sagrey
 	url = git@github.com:uubk/sagrey.git
+[submodule "memcd-addr-list"]
+	path = memcd-addr-list
+	url = git@github.com:uubk/memcd-addr-list.git

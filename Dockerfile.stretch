@@ -19,7 +19,9 @@ RUN apt update && \
     cmake \
     ragel \
     quilt \
-    libunwind8-dev
+    libunwind8-dev \
+    spamassassin \
+    libcache-memcached-perl
 
 COPY . /tmp/wd
 WORKDIR /tmp/wd

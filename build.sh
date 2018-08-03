@@ -32,4 +32,5 @@ buildpkg mcrouter_0.57_amd64.deb mcrouter
 
 # Perl
 buildpkg spamassassin-plugin-sagrey_0.1-1_all.deb sagrey
+buildpkg spamassassin-plugin-memcdaddrlist_0.1-1_all.deb memcd-addr-list
 # vim: set ts=4 sw=4 tw=0 et :
